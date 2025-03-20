@@ -14,7 +14,11 @@ public class Author {
     }
 
     public float calculateTotalPay() {
-        return 0;
+        float totalPay = 0;
+        for (Title t : titles) {
+           totalPay += t.calculateRoylaty();
+        }
+        return totalPay;
     }
 
     public String getName() {

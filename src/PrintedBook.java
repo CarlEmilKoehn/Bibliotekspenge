@@ -6,6 +6,7 @@ public class PrintedBook extends Title {
         this.pages = pages;
     }
 
+    @Override
     protected double calculatePoints() {
         double points = pages * convertLiteratureType() * super.copies;
         return points;

@@ -12,8 +12,9 @@ public abstract class Title {
     }
 
     public double calculateRoylaty() {
-
-        return 0.0;
+        System.out.println(calculatePoints());
+        System.out.println("Royalty for + " + title + " of literaturetype " + literatureType + " is: " + calculatePoints() * rate);
+        return calculatePoints() * rate;
     }
 
     protected abstract double calculatePoints();

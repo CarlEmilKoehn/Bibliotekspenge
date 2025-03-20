@@ -1,4 +1,4 @@
-public class AudioBook extends Title{
+public class AudioBook extends Title implements IAudioBook {
     private double durationInMinutes;
 
     public AudioBook(String title, String literatureType, int copies, int durationInMinutes) {
@@ -6,6 +6,7 @@ public class AudioBook extends Title{
         this.durationInMinutes = durationInMinutes;
     }
 
+    @Override
     protected double calculatePoints() {
 
         double points = durationInMinutes * 0.5 * convertLiteratureType() * super.copies;
